@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fixit-rl
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+    healthCheckPath: /health
+    autoDeploy: true
